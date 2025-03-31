@@ -1,0 +1,14 @@
+{
+     "branches": "main",
+     "repositoryUrl": "git@github.com:emboss/service-b.git",
+     "debug": "true",
+     "plugins": [
+        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/exec",
+            {
+                "prepareCmd": "./release.sh ${nextRelease.version}"
+            }
+        ]
+    ]
+}
