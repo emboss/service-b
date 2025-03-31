@@ -1,0 +1,23 @@
+#!/bin/sh
+#
+# A POSIX-compliant commit-msg hook to enforce Conventional Commits.
+# See: https://www.conventionalcommits.org/
+
+# Read the commit message
+COMMIT_MSG_FILE="$1"
+COMMIT_MSG=$(cat "$COMMIT_MSG_FILE")
+
+# Define the Conventional Commit regex pattern
+CONVENTIONAL_COMMIT_REGEX="^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert|release)(\(.+?\))?: .{1,}$"
+
+# Check if the commit message matches the pattern
+if ! echo "$COMMIT_MSG" | grep -qE "$CONVENTIONAL_COMMIT_REGEX"; then
+  echo "Error: Commit message does not follow Conventional Commits format."
+  echo "Example: 'feat(component): add new feature'"
+  echo "See https://www.conventionalcommits.org/ for more details."
+  exit 1
+fi
+
+# If the message is valid, exit successfully
+echo "Commit message follows Conventional Commits format."
+exit 0
