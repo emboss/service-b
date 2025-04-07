@@ -3,6 +3,10 @@ echo "version = $1"
 # Get version number from version tag
 JAR_VERSION=$(echo $1 | cut -d'v' -f2)
 echo "jar version = $JAR_VERSION"
+echo "JAVA_HOME = $JAVA_HOME"
+echo "M2_HOME = $M2_HOME"
+java -version
+mvn -v
 
 rm -rf release
 mkdir release

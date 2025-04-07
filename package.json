@@ -4,7 +4,7 @@
   "description": "A demo service using semantic-release",
   "scripts": {
     "release": "npx semantic-release",
-    "release:local": "npx semantic-release --no-ci",
+    "release:local": "npx semantic-release --no-ci --debug",
     "prepare": "husky"
   },
   "author": "Martin Boßlet",
