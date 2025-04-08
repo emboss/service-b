@@ -10,6 +10,17 @@
             {
                 "prepareCmd": "./release.sh ${nextRelease.version}"
             }
+        ],
+        [
+            "@semantic-release/github",
+            {
+                "assets": [
+                    {
+                        "path": "release/service-b-*.jar",
+                        "label": "Service B JAR file"
+                    }
+                ]
+            }
         ]
     ]
 }
