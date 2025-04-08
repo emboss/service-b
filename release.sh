@@ -14,12 +14,4 @@ mkdir release
 # Copy the jar file to the release directory
 cp target/service-b-$JAR_VERSION.jar release/service-b-$JAR_VERSION.jar
 
-# Publish the jar file to GitHub Packages Maven registry
-echo "Maven user name: $MAVEN_USERNAME"
-if [ -z "$MAVEN_PASSWORD" ]; then
-  echo "MAVEN_PASSWORD is not set"
-  exit 1
-else
-  echo "MAVEN_PASSWORD is set"
-fi
 ./mvnw --batch-mode deploy -Drevision=$JAR_VERSION -DskipTests
