@@ -72,7 +72,7 @@ This ensures all commits are machine-readable for semantic-release to properly d
 You can access the released artifacts in several ways:
 
 1. **Local Release Directory**:
-   - After running `npm run release` or `npm run release:local`, check the `release` folder
+   - After running `npm run release:local`, check the local `release` folder
 
 2. **GitHub Releases**:
    - Visit the GitHub repository's Releases page to download JARs for specific versions
