@@ -18,6 +18,7 @@
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>21</java.version>
+        <gpg.skip>true</gpg.skip>
     </properties>
 
     <dependencies>
@@ -52,4 +53,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/emboss/service-b</url>
+        </repository>
+    </distributionManagement>
+
+    <servers>
+        <server>
+            <id>github</id>
+            <username>${env.GITHUB_ACTOR}</username>
+            <password>${env.GITHUB_TOKEN}</password>
+        </server>
+    </servers>
 </project>

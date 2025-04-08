@@ -13,3 +13,6 @@ mkdir release
 ./mvnw clean package -Drevision=$JAR_VERSION -DskipTests
 # Copy the jar file to the release directory
 cp target/service-b-$JAR_VERSION.jar release/service-b-$JAR_VERSION.jar
+
+# Publish the jar file to GitHub Packages Maven registry
+./mvnw deploy -Drevision=$JAR_VERSION -DskipTests
