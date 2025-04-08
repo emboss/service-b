@@ -2,7 +2,6 @@ release/**/*
 !release/.keep
 
 HELP.md
-.mvn
 target/
 !**/src/main/**/target/
 !**/src/test/**/target/
