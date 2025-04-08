@@ -17,7 +17,7 @@
                 "assets": [
                     {
                         "path": "release/service-b-*.jar",
-                        "label": "Service B JAR file"
+                        "label": "Service B ${nextRelease.version}"
                     }
                 ]
             }
