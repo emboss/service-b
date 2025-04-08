@@ -120,3 +120,6 @@ In CI environments, releases are typically triggered automatically after merging
 The application's version is available at runtime through:
 - The `/api/version` endpoint
 - Injected into `application.properties` as `api.version`
+
+# License
+No license is provided for this project. It is intended for educational purposes only.
