@@ -1,7 +1,6 @@
 release/**/*
 !release/.keep
 
-HELP.md
 target/
 !**/src/main/**/target/
 !**/src/test/**/target/
