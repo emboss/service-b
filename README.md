@@ -1,6 +1,6 @@
-# Service B - Spring Boot with Semantic Release
+# Service B - Spring Boot with Semantic Release & Maven
 
-A minimalistic Spring Boot demo application that demonstrates automated semantic versioning using semantic-release.
+A minimalistic Spring Boot demo application that demonstrates automated semantic versioning using semantic-release with a Maven-based project.
 
 ## Overview
 
