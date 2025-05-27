@@ -37,8 +37,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     needs: test
-    if: >
-      ${{ needs.test.result == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/develop') }}
+    if: needs.test.result == 'success' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/beta' || github.ref == 'refs/heads/develop')
     permissions:
       contents: write
       packages: write
