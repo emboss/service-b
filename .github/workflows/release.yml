@@ -1,9 +1,15 @@
 name: Release
 
 on:
-  push:
+  workflow_run:
+    # Trigger this workflow when the 'Test' workflow completes successfully
+    # and the branch is one of 'main', 'beta', or 'develop'.
+    workflows: ["Test"]
+    types: [completed]
     branches:
       - main
+      - beta
+      - develop
 
 permissions:
   contents: write
