@@ -3,7 +3,7 @@
         "main",
         {
             "name": "develop",
-            "prerelease": true,
+            "prerelease": "SNAPSHOT",
             "channel": "snapshot"
         },
         {
@@ -19,7 +19,7 @@
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "if [ \"$SEMANTIC_RELEASE_BRANCH\" = \"develop\" ]; then ./release.sh ${nextRelease.version}-SNAPSHOT; else ./release.sh ${nextRelease.version}; fi"
+                "prepareCmd": "./release.sh ${nextRelease.version}"
             }
         ],
         [
