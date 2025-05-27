@@ -1,14 +1,25 @@
 {
-     "branches": "main",
-     "repositoryUrl": "https://github.com/emboss/service-b.git",
-     "debug": "true",
-     "plugins": [
+    "branches": [
+        "main",
+        {
+            "name": "develop",
+            "prerelease": true,
+            "channel": "snapshot"
+        },
+        {
+            "name": "beta",
+            "prerelease": true
+        }
+    ],
+    "repositoryUrl": "https://github.com/emboss/service-b.git",
+    "debug": "true",
+    "plugins": [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
         [
             "@semantic-release/exec",
             {
-                "prepareCmd": "./release.sh ${nextRelease.version}"
+                "prepareCmd": "if [ \"$SEMANTIC_RELEASE_BRANCH\" = \"develop\" ]; then ./release.sh ${nextRelease.version}-SNAPSHOT; else ./release.sh ${nextRelease.version}; fi"
             }
         ],
         [
