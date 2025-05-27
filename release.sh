@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "version = $1"
 
 # Get version number from version tag
