@@ -24,4 +24,11 @@ public class ApiController {
     public String getInfo() {
         return "Service B - Version: " + version;
     }
+
+
+    @GetMapping("/hello")
+    public String getHello() {
+        return "hello from service B";
+    }
+ 
 }
