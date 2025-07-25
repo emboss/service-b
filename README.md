@@ -296,7 +296,7 @@ If you want to **force a specific version** on the next release, you can:
 
 #### Summary Table
 
-| Action                | How-To                                                                                  |
+| Action                | How-To                                                                                 |
 |-----------------------|----------------------------------------------------------------------------------------|
 | Yank Git tag          | `git tag -d vX.Y.Z && git push origin :refs/tags/vX.Y.Z`                               |
 | Delete GitHub Release | GitHub UI or `gh release delete vX.Y.Z`                                                |
